@@ -6,7 +6,7 @@ Project Title:
 CareerTrack – Full-Stack Job Portal and Recruitment Management System
 
 GitHub Repository URL:
-https://github.com/your-username/careertrack-major-project
+https://github.com/MUKULJHA-134/CareerTrack_Major_Project
 
 Recommended Git Push Commands to Initialize Your Remote Repository:
 ------------------------------------------------------------------
