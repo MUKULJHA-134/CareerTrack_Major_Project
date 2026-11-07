@@ -1,0 +1,52 @@
+================================================================================
+CAREERTRACK - MAJOR PROJECT: LIVE DEPLOYMENT & EVALUATION LINKS
+================================================================================
+
+Project Title:
+CareerTrack – Full-Stack Job Portal and Recruitment Management System
+
+1. Live Deployment Working URLs (Cloud Staging / Production):
+------------------------------------------------------------
+- Public Job Portal:
+  https://careertrack-jobs.vercel.app/ (or your deployed Vercel/Netlify URL)
+
+- Backend REST API Base URL:
+  https://careertrack-api.onrender.com/api (or your deployed Render/Railway URL)
+
+- Backend Service Health Check:
+  https://careertrack-api.onrender.com/api/health
+
+- Administrator Portal & Dashboard:
+  https://careertrack-jobs.vercel.app/admin/login
+
+2. Demonstration Administrator Access (Safe Evaluation Account):
+-----------------------------------------------------------------
+- Role: Super Administrator
+- Email: admin@careertrack.com
+- Password: AdminPassword123!
+*(Note: An interactive "Quick Fill" button is provided on the Admin Login page for instant one-click evaluator login!)*
+
+3. Local Setup Instructions (Zero-Dependency Evaluation Fallback):
+------------------------------------------------------------------
+In case cloud services are temporarily unavailable or for in-depth code inspection:
+
+Step 1: Start the Backend REST API
+  cd backend
+  npm install
+  npm run dev
+  -> Runs on http://localhost:5000
+  -> Automatically detects local or cloud MongoDB; seamlessly spins up an
+     in-memory MongoDB instance with realistic seed data if MongoDB is absent!
+
+Step 2: Start the React Frontend Application
+  cd frontend
+  npm install
+  npm run dev
+  -> Runs on http://localhost:5173
+
+Step 3: Access Local Application
+  - Candidate Portal:    http://localhost:5173/
+  - Admin Login:         http://localhost:5173/admin/login
+  - Admin Dashboard:     http://localhost:5173/admin/dashboard
+  - Backend API Health:  http://localhost:5000/api/health
+================================================================================

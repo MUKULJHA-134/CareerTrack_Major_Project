@@ -1,0 +1,37 @@
+================================================================================
+CAREERTRACK - MAJOR PROJECT: GITHUB REPOSITORY LINK & SUBMISSION DETAILS
+================================================================================
+
+Project Title:
+CareerTrack – Full-Stack Job Portal and Recruitment Management System
+
+GitHub Repository URL:
+https://github.com/your-username/careertrack-major-project
+
+Recommended Git Push Commands to Initialize Your Remote Repository:
+------------------------------------------------------------------
+1. Initialize local Git repository:
+   git init
+
+2. Stage all deliverables:
+   git add .
+
+3. Create the initial comprehensive commit:
+   git commit -m "feat: complete CareerTrack full-stack recruitment management system"
+
+4. Link to your GitHub remote repository:
+   git branch -M main
+   git remote add origin https://github.com/your-username/careertrack-major-project.git
+
+5. Push the project:
+   git push -u origin main
+
+Repository Contents Verification:
+- Complete Frontend source code (React 18 + Vite + Custom Glassmorphism Design System)
+- Complete Backend source code (Node.js + Express.js + Mongoose + Multer)
+- Full documentation suite (/docs)
+- Authentic screenshots (/screenshots)
+- 20-Section Major Project Report (Project_Report.md)
+- Root and sub-directory .env.example files
+- Clean .gitignore excluding node_modules, private secrets, and large binaries
+================================================================================
