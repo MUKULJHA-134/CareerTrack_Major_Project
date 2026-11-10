@@ -33,10 +33,9 @@ app.use(
   cors({
     origin: (origin, callback) => {
       // Allow requests with no origin (like mobile apps, curl, or Postman)
-      if (!origin || allowedOrigins.includes(origin)) {
-        return callback(null, true);
-      }
-      return callback(null, true); // Permissive in dev to avoid CORS friction
+      if (!origin) return callback(null, true);
+      // Echo incoming origin to support Vercel preview URLs & custom domains seamlessly
+      return callback(null, origin);
     },
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],

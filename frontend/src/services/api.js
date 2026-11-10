@@ -1,4 +1,5 @@
-const API_BASE = import.meta.env.VITE_API_URL || '';
+// Safely strip any trailing slashes from API_BASE to avoid malformed double slashes (e.g. //api/...)
+const API_BASE = (import.meta.env.VITE_API_URL || '').replace(/\/+$/, '');
 
 // Helper to get auth header with Bearer token
 const getAuthHeaders = () => {
