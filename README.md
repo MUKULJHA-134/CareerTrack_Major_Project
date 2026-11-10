@@ -146,7 +146,7 @@ cp frontend/.env.example frontend/.env
 ```
 Default configuration value:
 ```env
-VITE_API_URL=
+VITE_API_URL= https://career-track-major-project-theta.vercel.app/
 ```
 *(Leave blank in local development to utilize Vite's built-in `/api` proxy.)*
 
