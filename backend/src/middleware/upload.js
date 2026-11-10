@@ -1,11 +1,19 @@
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
+const os = require('os');
 
-// Ensure upload directory exists
-const uploadDir = path.join(__dirname, '../../uploads/resumes');
-if (!fs.existsSync(uploadDir)) {
-  fs.mkdirSync(uploadDir, { recursive: true });
+// Ensure upload directory exists (falls back to os.tmpdir() on serverless / Vercel platforms)
+const uploadDir = process.env.VERCEL
+  ? path.join(os.tmpdir(), 'uploads', 'resumes')
+  : path.join(__dirname, '../../uploads/resumes');
+
+try {
+  if (!fs.existsSync(uploadDir)) {
+    fs.mkdirSync(uploadDir, { recursive: true });
+  }
+} catch (err) {
+  console.warn(`[Multer] Warning creating upload directory ${uploadDir}: ${err.message}`);
 }
 
 // Configure disk storage

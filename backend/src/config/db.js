@@ -3,15 +3,25 @@ const mongoose = require('mongoose');
 let mongod = null;
 
 const connectDB = async () => {
+  // Reuse existing connection if active (essential for serverless environments like Vercel)
+  if (mongoose.connection.readyState >= 1) {
+    return;
+  }
+
   const primaryUri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/careertrack';
 
   try {
-    // Attempt connecting to the configured URI with a 3-second timeout
+    // Attempt connecting to the configured URI with a 5-second timeout
     await mongoose.connect(primaryUri, {
-      serverSelectionTimeoutMS: 3000
+      serverSelectionTimeoutMS: 5000
     });
     console.log(`[Database] Connected successfully to MongoDB: ${mongoose.connection.host}/${mongoose.connection.name}`);
   } catch (error) {
+    if (process.env.VERCEL) {
+      console.error(`[Database] Fatal: Failed to connect to MongoDB on Vercel: ${error.message}`);
+      throw error;
+    }
+
     console.warn(`[Database] Could not connect to primary MongoDB (${primaryUri}): ${error.message}`);
     console.log('[Database] Starting seamless in-memory MongoDB fallback instance for zero-setup local execution...');
 
