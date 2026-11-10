@@ -8,7 +8,7 @@ CareerTrack – Full-Stack Job Portal and Recruitment Management System
 1. Live Deployment Working URLs (Cloud Staging / Production):
 ------------------------------------------------------------
 - Public Job Portal:
-  https://careertrack-jobs.vercel.app/ (or your deployed Vercel/Netlify URL)
+  https://career-track-major-project-theta.vercel.app/
 
 - Backend REST API Base URL:
   https://careertrack-api.onrender.com/api (or your deployed Render/Railway URL)
