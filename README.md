@@ -132,7 +132,7 @@ Default configuration values:
 PORT=5000
 NODE_ENV=development
 MONGODB_URI=mongodb://127.0.0.1:27017/careertrack
-JWT_SECRET=super_secret_jwt_key_careertrack_2026_recruitment_auth
+JWT_SECRET=Wright_your_super_secret_jwt_key
 JWT_EXPIRES_IN=7d
 MAX_FILE_SIZE=5242880
 UPLOAD_DIR=uploads/resumes
